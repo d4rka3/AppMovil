@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-img src="assets/img/duoc.png"></ion-img>
+</ion-header>
+
+<ion-content class="fondo">
+  <h2>Ingrese el Usuario para recuperar su Contraseña</h2>
+  <ion-item>
+    <ion-label position="floating">Nombre de Usuario</ion-label>
+    <ion-input type="text" #Usuario></ion-input>
+  </ion-item>
+
+  <button mat-button id="boton" (click)="iniciarCarga()">RECUPERAR</button>
+
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>
+</ion-content>
+

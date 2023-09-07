@@ -1,0 +1,71 @@
+ion-content {
+ --background: url('/assets/img/fondo-cifras.jpg');
+
+}
+
+ion-header{
+    background-color: #07315b;
+
+}
+
+ion-item{
+    background-color: white ;
+    top: 60PX;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: "confortaa", sans-serif;
+    font-size: -20px;
+    margin: auto;
+    padding: 2px;
+    width: 280px;    
+}
+
+h2{
+    position: relative;
+    border : solid 2px #000000;
+    padding: 1px ;
+    width:280px;
+    font-family: "confortaa", sans-serif;
+    font-size: 15px;
+    color: #333;
+    text-align: center;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+#boton{
+    background-color: #07315b;
+    color: rgb(254, 254, 254);
+    border: none;
+    border-radius: 5px; 
+    padding: 0px 60px; 
+    display: block; 
+    margin:  auto;
+    text-align: center;
+    margin-top: 120px;
+    line-height: 50px; 
+    
+    justify-content: center;
+    align-items: center;
+    font-family: "confortaa", sans-serif;
+}
+
+
+mat-spinner {
+    margin-top: 10px ;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    width: 2x;
+    height: 2px; 
+}
+
+p{
+    position: absolute;
+    margin-top: 10px;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+

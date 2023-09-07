@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-title>
+    <ion-img src="assets/img/duoc.png"></ion-img>
+  </ion-title>
+</ion-header>
+
+<ion-content  >
+  <form (submit)="Formulario(Usuario.value)">
+ 
+    <br>
+
+    <ion-item>
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input type="text" #Usuario ></ion-input>
+    </ion-item>
+
+    <br>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="{{ hide ? 'password' : 'text' }}"></ion-input>
+      <ion-icon name="{{ hide ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePassword()"></ion-icon>
+    </ion-item>
+
+    <br>
+
+    <button mat-button id="boton" type="submit" >Ingresar </button>
+    <br>
+
+    <ion-link routerLink="/recuperar" color="primary" id="ContraseñaPerdida">
+      ¿Olvidaste tu contraseña?, clickea aqui.
+    </ion-link>
+
+    <mat-spinner *ngIf="showSpinner"></mat-spinner>
+    <p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>
+
+
+  </form>
+  
+</ion-content>
+
+ 

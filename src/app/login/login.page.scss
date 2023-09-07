@@ -1,0 +1,64 @@
+ion-title{
+    background-color: #052444;
+    padding: 40px ;
+}
+
+ion-input{
+    margin-top: 25;
+    color: rgb(234, 179, 31); 
+    border-radius: 5px; 
+    padding: 100px; 
+    margin-bottom: 10px; 
+}
+
+#boton{
+    background-color: #07315b;
+    color: rgb(254, 254, 254);
+    border: none;
+    border-radius: 5px; 
+    padding: 20px 70px; 
+    display: block; 
+    margin:  auto;
+    text-align: center;
+    margin-top: 30px;
+    line-height: 70px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "confortaa", sans-serif;
+}
+
+ion-link {
+    margin-top: 10px;
+    color: rgb(88, 138, 188);
+    display: block;
+    text-align: center;
+    
+}
+
+
+mat-spinner {
+    margin-top: 10px ;
+    position: absolute;
+    bottom: 10px; 
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Lo reajusta a la posición correcta */
+    width: 2x; /* Ajusta el ancho según lo necesites */
+    height: 2px; 
+}
+
+p{
+    position: absolute;
+    margin-top: 10px;
+    bottom: 20px; /* Ajusta la distancia desde el borde inferior */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translateX(-50%); /* Lo reajusta a la posición correcta */
+}
+
+
+
+
+
+
+
+
