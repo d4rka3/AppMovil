@@ -35,7 +35,6 @@ export class LoginPage {
         };
 
         this.router.navigate(['/home'], navigationExtras);
-        localStorage.setItem('username', this.Usuario);
       }
     }, 100);
   }

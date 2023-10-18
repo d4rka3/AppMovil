@@ -10,13 +10,12 @@
   </div>
   
 <br>
-<form class="form-container">
-    <ion-item>
+    <ion-item  class="form-container">
       <ion-label position="floating">Nombre de Usuario</ion-label>
       <ion-input type="text" [(ngModel)]="Usuario"></ion-input>
     </ion-item>
 <br>
-    <ion-item>
+    <ion-item class="form-container">
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="{{ hide ? 'password' : 'text' }}"></ion-input>
       <ion-icon name="{{ hide ? 'eye-off' : 'eye' }}" slot="end" (click)="togglePassword()"></ion-icon>
@@ -24,7 +23,7 @@
 
 <br>
 
-</form>
+
 <ion-button class="custom-input" (click)="login()">Ingresar </ion-button>
 
 
