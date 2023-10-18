@@ -1,21 +1,25 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
 })
+
+
+
 export class LoginPage {
+  Usuario: any;
   showSpinner = false;
   loadingPercentage = 0;
-  Usuario: any;
   hide = false;
 
   constructor(private router: Router) {}
 
   Formulario(Usuario: any) {
-    localStorage.setItem('Usuario', Usuario);
+    localStorage.setItem('username', Usuario);
 
     this.showSpinner = true;
     const interval = setInterval(() => {
@@ -24,7 +28,13 @@ export class LoginPage {
         clearInterval(interval);
         this.showSpinner = false;
         
-        this.router.navigate(['/home']);
+        let navigationExtras: NavigationExtras = {
+          state: {
+            username: this.Usuario
+          }
+        };
+
+        this.router.navigate(['/home'], navigationExtras);
       }
     }, 200);
   }
