@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavigationExtras } from '@angular/router';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -16,18 +17,17 @@ export class LoginPage {
   loadingPercentage = 0;
   hide = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  Formulario(Usuario: any) {
-    localStorage.setItem('username', Usuario);
-
+  login() {
     this.showSpinner = true;
     const interval = setInterval(() => {
       this.loadingPercentage += 10;
       if (this.loadingPercentage >= 100) {
         clearInterval(interval);
         this.showSpinner = false;
-        
+
+
         let navigationExtras: NavigationExtras = {
           state: {
             username: this.Usuario
@@ -35,8 +35,9 @@ export class LoginPage {
         };
 
         this.router.navigate(['/home'], navigationExtras);
+        localStorage.setItem('username', this.Usuario);
       }
-    }, 200);
+    }, 100);
   }
 
   togglePassword() {

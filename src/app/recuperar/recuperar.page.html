@@ -1,20 +1,24 @@
 
 <ion-header>
   <ion-toolbar>
-  <ion-img src="assets/img/duoc.png"></ion-img>
-      <ion-buttons>
-      </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="fondo">
+  <div class="logo-container">
+    <ion-img src="assets/img/duoc.png" class="logo"></ion-img>
+  </div>
+<br>
   <h2>Ingrese el Usuario para recuperar su Contraseña</h2>
   <ion-item>
     <ion-label position="floating">Nombre de Usuario</ion-label>
     <ion-input type="text" #Usuario></ion-input>
   </ion-item>
 
-<ion-button rg>RECUPERAR</ion-button>
+<ion-button class="boton-perso" [routerLink]="['/login']">RECUPERAR</ion-button>
   
 
   
