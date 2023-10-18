@@ -1,5 +1,10 @@
+
 <ion-header>
+  <ion-toolbar>
   <ion-img src="assets/img/duoc.png"></ion-img>
+      <ion-buttons>
+      </ion-buttons>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content class="fondo">
@@ -9,9 +14,9 @@
     <ion-input type="text" #Usuario></ion-input>
   </ion-item>
 
-  <button mat-button id="boton" (click)="iniciarCarga()">RECUPERAR</button>
+<ion-button rg>RECUPERAR</ion-button>
+  
 
-  <mat-spinner *ngIf="showSpinner"></mat-spinner>
-    <p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>
+  
 </ion-content>
 

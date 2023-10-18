@@ -1,5 +1,5 @@
 ion-content {
- --background: url('/assets/img/fondo-cifras.jpg');
+ --background : black;
 
 }
 
@@ -20,6 +20,13 @@ ion-item{
     width: 280px;    
 }
 
+back-button {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+    margin-left: 15px; /* Ajusta el margen izquierdo para el botón de "Atrás" */
+}
+
 h2{
     position: relative;
     border : solid 2px #000000;
@@ -32,13 +39,8 @@ h2{
     text-transform: uppercase;
     margin: auto;
 }
-
-#boton{
-    background-color: #07315b;
-    color: rgb(254, 254, 254);
-    border: none;
-    border-radius: 5px; 
-    padding: 0px 60px; 
+ion-button{
+  
     display: block; 
     margin:  auto;
     text-align: center;
@@ -68,4 +70,6 @@ p{
     left: 50%; 
     transform: translateX(-50%); 
 }
+
+
 
