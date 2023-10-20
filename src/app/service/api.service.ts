@@ -13,8 +13,7 @@ export class ApiService {
 
   
   getNameUser(): Observable<any> {
-    const url = `${this.apiURL}/lista_users/`; // Asegúrate de que esta sea la URL correcta para obtener la lista de usuarios
-    return this.http.get(url)
+    return this.http.get(this.apiURL+'/lista_users')
       .pipe(retry(3));
   }
 }
