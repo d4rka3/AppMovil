@@ -15,8 +15,13 @@ export class LoginPage {
   hide = false;
 
   constructor(private router: Router, private api:ApiService ) { }
-
+  
   login() {
+    this.api.getNameuser().subscribe((res)=>{
+      console.log(res[0]);
+    },(error)=>{
+      console.log(error);
+    
 
         let navigationExtras: NavigationExtras = {
           state: {
@@ -25,7 +30,8 @@ export class LoginPage {
         };
 
         this.router.navigate(['/home'], navigationExtras);
-      };
+      }
+    )};
 
   togglePassword() {
     this.hide = !this.hide;

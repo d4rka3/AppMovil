@@ -12,9 +12,9 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   
-  getNameUser(): Observable<any> {
+  getNameuser(): Observable<any> {
     return this.http.get(this.apiURL+'/lista_users')
-      .pipe(retry(3));
+      .pipe(retry(3))
   }
 }
 
