@@ -8,15 +8,31 @@ import { Router } from '@angular/router';
 })
 export class RecuperarPage {
   
+  showSpinner = false; // Inicialmente el spinner no se muestra
+  loadingPercentage = 0;
+
   constructor(private router: Router) { }
 
   iniciarCarga() {
-   
-    
+    this.showSpinner = true; // Mostrar el spinner al iniciar la carga
+
+    const interval = setInterval(() => {
+      this.loadingPercentage += 10;
+      if (this.loadingPercentage >= 100) {
+        clearInterval(interval);
+        this.showSpinner = false;
         this.router.navigate(['/login']);
       }
-   
-  
+    }, 100);
+  }
 }
+
+
+
+
+
+
+
+
 
 

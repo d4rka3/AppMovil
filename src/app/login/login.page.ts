@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { NavigationExtras } from '@angular/router';
+import { ApiService } from '../service/api.service';
 
 
 @Component({
@@ -9,24 +10,13 @@ import { NavigationExtras } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 
-
-
 export class LoginPage {
   Usuario: any;
-  showSpinner = false;
-  loadingPercentage = 0;
   hide = false;
 
   constructor(private router: Router) { }
 
   login() {
-    this.showSpinner = true;
-    const interval = setInterval(() => {
-      this.loadingPercentage += 10;
-      if (this.loadingPercentage >= 100) {
-        clearInterval(interval);
-        this.showSpinner = false;
-
 
         let navigationExtras: NavigationExtras = {
           state: {
@@ -35,13 +25,12 @@ export class LoginPage {
         };
 
         this.router.navigate(['/home'], navigationExtras);
-      }
-    }, 100);
-  }
+      };
 
   togglePassword() {
     this.hide = !this.hide;
   }
+
 }
 
 

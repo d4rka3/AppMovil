@@ -62,17 +62,19 @@ mat-spinner {
     position: absolute;
     bottom: 10px; 
     left: 50%; 
-    transform: translateX(-50%);
+    transform: translateX(-50%); 
     width: 2x;
-    height: 2px; 
+    height: 2px;
 }
 
 p{
+    margin-top: 20px ;
     position: absolute;
-    margin-top: 10px;
-    bottom: 20px; 
+    bottom: 10px; 
     left: 50%; 
     transform: translateX(-50%); 
+    width: 2x;
+    height: 2px;;
 }
 
 

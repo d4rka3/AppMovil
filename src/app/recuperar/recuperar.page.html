@@ -14,13 +14,16 @@
 <br>
   <h2>Ingrese el Usuario para recuperar su Contraseña</h2>
   <ion-item>
+    
     <ion-label position="floating">Nombre de Usuario</ion-label>
     <ion-input type="text" #Usuario></ion-input>
   </ion-item>
 
-<ion-button class="boton-perso" [routerLink]="['/login']">RECUPERAR</ion-button>
-  
+<ion-button class="boton-perso"  (click)="iniciarCarga()">RECUPERAR</ion-button>
 
-  
+<mat-spinner *ngIf="showSpinner"></mat-spinner>
+<p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>    
+
+
 </ion-content>
 

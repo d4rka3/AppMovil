@@ -26,11 +26,6 @@
 
 <ion-button class="custom-input" (click)="login()">Ingresar </ion-button>
 
-
-    <mat-spinner *ngIf="showSpinner"></mat-spinner>
-    <p *ngIf="showSpinner">Cargando...: {{ loadingPercentage }}%</p>    
-
-
   <ion-link [routerLink]="['/recuperar']" color="primary" id="ContraseñaPerdida">
       ¿Olvidaste tu contraseña?, clickea aqui.
   </ion-link>
