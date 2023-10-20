@@ -14,7 +14,7 @@ export class LoginPage {
   Usuario: any;
   hide = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private api:ApiService ) { }
 
   login() {
 
@@ -31,9 +31,8 @@ export class LoginPage {
     this.hide = !this.hide;
   }
 
+
 }
-
-
 
 
 

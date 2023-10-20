@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class RecuperarPage {
   
-  showSpinner = false; // Inicialmente el spinner no se muestra
+  showSpinner = false; 
   loadingPercentage = 0;
 
   constructor(private router: Router) { }
@@ -21,6 +21,7 @@ export class RecuperarPage {
       if (this.loadingPercentage >= 100) {
         clearInterval(interval);
         this.showSpinner = false;
+        
         this.router.navigate(['/login']);
       }
     }, 100);
